@@ -15,4 +15,4 @@ On the files:
 
 2. Tutorial_ChapterNumber_Topic.ipynb are (relatively) short notebooks organised around specific topics.
 
-3. The current version is tested on Julia 0.5.1.
+3. The current version is tested on Julia 0.6.0.
