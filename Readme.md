@@ -11,7 +11,7 @@ This folder contains my Julia tutorials (aimed at students in finance and econom
 
 On the files:
 
-1. The .jl files are functions uses in some of the notebooks
+1. The .jl files are functions used in some of the notebooks.
 
 2. Tutorial_ChapterNumber_Topic.ipynb are (relatively) short notebooks organised around specific topics.
 
