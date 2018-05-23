@@ -1,9 +1,0 @@
-Dogs are 
-nicer than cats.
-
-
-         1         7         5
-         6         7         4
-         5         1         6
-         2         3         7
-
