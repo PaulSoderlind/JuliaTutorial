@@ -39,7 +39,7 @@ function printmat(fh::IO,x,width=10,prec=3,NoPrinting=false,htmlQ=false)
   end
 
   if ndims(x) > 2
-    warn("more than 2 dimensions")
+    Compat.@warn("more than 2 dimensions")
     return nothing
   end
 
