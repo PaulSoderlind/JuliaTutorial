@@ -39,7 +39,7 @@ function printmat(fh::IO,x,width=10,prec=3,NoPrinting=false,htmlQ=false)
   end
 
   if ndims(x) > 2
-    Compat.@warn("more than 2 dimensions")
+    @warn("more than 2 dimensions")
     return nothing
   end
 
@@ -83,7 +83,7 @@ Formats a scalar and creates a string of it.
 """
 function fmtNumPs(z,width=10,prec=2,justify="right",htmlQ=false)
   if prec > 0                        #if decimal number
-    z   = Compat.round(z,digits=prec,base=10)     #101.23
+    z   = round(z,digits=prec)       #101.23
     str = split(string(z),'.')
     if length(str) > 1
       strR  = string(".",rpad(str[2],prec,"0"))   #.23

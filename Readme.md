@@ -15,4 +15,4 @@ On the files:
 
 2. Tutorial_ChapterNumber_Topic.ipynb are (relatively) short notebooks organised around different topics.
 
-3. The current version is tested on Julia 0.6, but uses mostly 0.7/1.0 syntax via the Compat.jl package. For instance, ```Compat.mean(x,dims=1)``` allows using the new 0.7/1.0 syntax in earlier Julia versions (instead of ```mean(x,1)``` in 0.6). If you run this is Julia 0.7/1.0, then the ```Compat.``` can (but does not have to) be dropped.
+3. The current version is tested on Julia 1.0, but but should work on 0.7 too.
