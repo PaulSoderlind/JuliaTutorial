@@ -1,6 +1,8 @@
 Readme for JuliaTutorial
 ========================
 
+WARNING 5 Sep 2018: the plots in the new (Julia 1.0.0) notebooks do not yet render on GitHub. This will be fixed soon.
+
 This folder contains my Julia tutorials (aimed at students in finance and economics). 
 
 *  Most files are jupyter notebooks. Click one of them to see it online. Sometimes it renders better if you activate the nbviewer (see the symbol in the upper right corner once you have opened the file).
