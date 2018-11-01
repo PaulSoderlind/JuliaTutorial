@@ -1,5 +1,8 @@
-Readme for JuliaTutorial
-========================
+# Notice 
+If GitHub fails to render the notebook, then use [nbviewer](https://nbviewer.jupyter.org/). First, try to open the notebook in GitHub, copy the link, paste it in the address field of nbviewer.
+
+
+# Introduction
 
 This folder contains my Julia tutorials (aimed at students in finance and economics). 
 
@@ -7,7 +10,6 @@ This folder contains my Julia tutorials (aimed at students in finance and econom
 *  To edit and run it online, use www.JuliaBox.com. It has many packages installed. In case you need further packages, see the top menu at JuliaBox.com. To get this repository to JuliaBox, use the Download (as zip) in the Github menu, unzip, then use JuliaBox to upload.
 *  To edit and run it with your local Julia installation do the following: (a) start Julia; (b) ```cd(file location)```; (c) ```using IJulia```; (d) ```notebook(dir=pwd())```. You clearly need IJulia to be installed for this.
 *  The subfolder Data contains some data sets used in the programs, while the subfolder Results is for output.
-
 
 On the files:
 
