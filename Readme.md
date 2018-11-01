@@ -1,5 +1,5 @@
 # Notice 
-If GitHub fails to render the notebook, then use [nbviewer](https://nbviewer.jupyter.org/). First, try to open the notebook in GitHub, copy the link, paste it in the address field of nbviewer.
+If GitHub fails to render the notebook, then use [nbviewer](https://nbviewer.jupyter.org/). Instructions: try to open the notebook in GitHub, copy the link and paste it in the address field of nbviewer.
 
 
 # Introduction
