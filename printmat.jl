@@ -1,21 +1,21 @@
 #------------------------------------------------------------------------------
 """
-    printmat([fh::IO],x,width=10,prec=3,NoPrinting=false,htmlQ=false)
+    printmat([fh::IO],x;width=10,prec=3,NoPrinting=false,htmlQ=false)
 
 Print all elements of matrix with predefined formatting.
 
 # Input
 - `fh::IO`:           (optional) file handle. If not supplied, prints to screen
 - `x::Array`:         string, date or array to print
-- `width::Int`:       (optional) scalar, width of printed cells. [10]
-- `prec::Int`:        (optional) scalar, precision of printed cells. []
-- `NoPrinting::Bool`: (optional) bool, true: no printing, just return formatted string
-- `hmtlQ::Bool`:      (optional) bool, true: format as htmlQ <td>cells</td>
+- `width::Int`:       (keyword) scalar, width of printed cells. [10]
+- `prec::Int`:        (keyword) scalar, precision of printed cells. [3]
+- `NoPrinting::Bool`: (keyword) bool, true: no printing, just return formatted string [false]
+- `hmtlQ::Bool`:      (keyword) bool, true: format as htmlQ <td>cells</td> [false]
 
 # Output
 - str         (if NoPrinting) string, (otherwise nothing)
 
-# Examples. Try the printing the following arrays:
+# Examples. Try printing the following arrays:
 - x = [11 12;21 22]
 - x = Any[1 "ab"; Date(2018,10,7) 3.14]
 
@@ -24,13 +24,12 @@ Print all elements of matrix with predefined formatting.
 
 # To do
 - use Dict() for the options, width etc?
-- sort out dispatch and keyword arguments
 
 
 Paul.Soderlind@unisg.ch
 
 """
-function printmat(fh::IO,x,width=10,prec=3,NoPrinting=false,htmlQ=false)
+function printmat(fh::IO,x;width=10,prec=3,NoPrinting=false,htmlQ=false)
 
   if isa(x,Union{String,Date,DateTime,Missing})  #these types need special treatment
     str = string(lpad(x,width),"\n")
@@ -75,8 +74,8 @@ function printmat(fh::IO,x,width=10,prec=3,NoPrinting=false,htmlQ=false)
 
 end
                   #when fh is not supplied: printing to screen
-printmat(x,width=10,prec=3,NoPrinting=false,htmlQ=false) = printmat(stdout::IO,
-         x,width,prec,NoPrinting,htmlQ)
+printmat(x;width=10,prec=3,NoPrinting=false,htmlQ=false) = printmat(stdout::IO,
+         x,width=width,prec=prec,NoPrinting=NoPrinting,htmlQ=htmlQ)
 #------------------------------------------------------------------------------
 
 
@@ -86,6 +85,7 @@ printmat(x,width=10,prec=3,NoPrinting=false,htmlQ=false) = printmat(stdout::IO,
 
 Formats a scalar and creates a string of it.
 
+# Remark
 The Formatting.jl package provides more elegant solutions:
 fmt  = FormatSpec(string(">",width,".",prec,"f"))   #right justified, else "<"
 fmt = FormatSpec(string(">",wid,"d"))               #for Int
