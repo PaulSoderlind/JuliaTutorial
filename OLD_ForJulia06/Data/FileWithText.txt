@@ -1,6 +1,0 @@
-Dogs are nicer
-than cats.
-          
-      This
-      is a
-fairly short file.
