@@ -120,32 +120,8 @@ end
 
 
 #------------------------------------------------------------------------------
-global printlnPsOpt = Dict("width"=>10,"prec"=>3)    #options for printlnPs()
-#------------------------------------------------------------------------------
-
-
-#------------------------------------------------------------------------------
 """
-    set_printlnPsOpt(opt)
-
-Set global options (width and prec) to printlnPs.
-
-# Notice
-This function is needed if printlnPs is part of a module.
-Otherwise we could set printlnPsOpt directly.
-
-"""
-function set_printlnPsOpt(opt)
-   global printlnPsOpt
-   printlnPsOpt = opt
-   println("printlnPsOpt is now $printlnPsOpt")
-end
-#------------------------------------------------------------------------------
-
-
-#------------------------------------------------------------------------------
-"""
-    printlnPs([fh::IO],z...)
+    printlnPs([fh::IO],z...;width=10,prec=3)
 
 Subsitute for println, with predefined formatting.
 
@@ -154,28 +130,10 @@ Subsitute for println, with predefined formatting.
 - `fh::IO`:    (optional) file handle. If not supplied, prints to screen
 - `z::String`: string, numbers and arrays to print
 
-# Refers to
-- printlnPsOpt, a global Dict("width"=>10,"prec"=>3)
-
-The formatting can be set globally by defining a dictionary in the calling scope.
-
 Paul.Soderlind@unisg.ch
 
 """
-function printlnPs(fh::IO,z...)
-
-  global printlnPsOpt
-
-  width = try                    #getting defaults from dictionary
-    get(printlnPsOpt,"width",10)
-  catch                          #if Dict() printlnPsOpt is not defined
-    10
-  end
-  prec = try
-    get(printlnPsOpt,"prec",3)
-  catch
-    3
-  end
+function printlnPs(fh::IO,z...;width=10,prec=3)
 
   for x in z                              #loop over inputs in z...
     if isa(x,Union{String,Date,DateTime,Missing})
@@ -201,5 +159,35 @@ function printlnPs(fh::IO,z...)
 
 end
                       #when fh is not supplied: printing to screen
-printlnPs(z...) = printlnPs(stdout::IO,z...)
+printlnPs(z...;width=10,prec=3) = printlnPs(stdout::IO,z...,width=width,prec=prec)
+#------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------
+"""
+    println2Ps
+
+Call on printlnPs twice: to print to screen and then to an open file (IOStream)
+"""
+function println2Ps(fh::IO,z...;width=10,prec=3)
+  printlnPs(z...,width=width,prec=prec)              #to screen
+  if isa(fh,IOStream) && isopen(fh)
+    printlnPs(fh::IO,z...,width=width,prec=prec)     #to file
+  end
+end
+#------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------
+"""
+    printmat2
+
+Call on printmat twice: to print to screen and then to an open file (IOStream)
+"""
+function printmat2(fh,x;width=10,prec=3,NoPrinting=false,htmlQ=false)
+  printmat(x,width=width,prec=prec,NoPrinting=NoPrinting,htmlQ=htmlQ)       #to screen
+  if isa(fh,IOStream) && isopen(fh)
+    printmat(fh,x,width=width,prec=prec,NoPrinting=NoPrinting,htmlQ=htmlQ)  #to file
+  end
+end
 #------------------------------------------------------------------------------
