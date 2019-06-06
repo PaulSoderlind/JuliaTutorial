@@ -191,3 +191,23 @@ function printmat2(fh,x;width=10,prec=3,NoPrinting=false,htmlQ=false)
   end
 end
 #------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------
+function printblue(x...)
+  foreach(z->printstyled(z,color=:blue,bold=true),x)
+  print("\n")
+end
+function printred(x...)
+  foreach(z->printstyled(z,color=:red,bold=true),x)
+  print("\n")
+end
+function printmagenta(x...)
+  foreach(z->printstyled(z,color=:magenta,bold=true),x)
+  print("\n")
+end
+function printyellow(x...)
+  foreach(z->printstyled(z,color=:yellow,bold=true),x)
+  print("\n")
+end
+#------------------------------------------------------------------------------
