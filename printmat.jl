@@ -31,7 +31,7 @@ Paul.Soderlind@unisg.ch
 """
 function printmat(fh::IO,x;width=10,prec=3,NoPrinting=false,htmlQ=false)
 
-  if isa(x,Union{String,Date,DateTime,Missing})  #these types need special treatment
+  if isa(x,Union{String,Date,DateTime,Missing})  #eg. a single Date
     str = string(lpad(x,width),"\n")
     if NoPrinting
       return str
@@ -55,7 +55,9 @@ function printmat(fh::IO,x;width=10,prec=3,NoPrinting=false,htmlQ=false)
     for j = 1:n                #loop over columns
       if isa(x[i,j],AbstractFloat)        #Float
         write(iob,fmtNumPs(x[i,j],width,prec,"right",htmlQ))
-      elseif isa(x[i,j],Nothing)           #Nothing
+      elseif isa(x[i,j],Bool)             #Bool, BitArrays
+        htmlQ ? write(iob,"<td>",lpad(x[i,j]+0,width),"</td>") : write(iob,lpad(x[i,j]+0,width))
+      elseif isa(x[i,j],Nothing)          #Nothing
         htmlQ ? write(iob,"<td>",lpad("",width),"</td>") : write(iob,lpad("",width))
       else                                #other types (Integer,Missing,String,Date,...)
         htmlQ ? write(iob,"<td>",lpad(x[i,j],width),"</td>") : write(iob,lpad(x[i,j],width))
@@ -88,7 +90,7 @@ Formats a scalar and creates a string of it.
 # Remark
 The Formatting.jl package provides more elegant solutions:
 fmt  = FormatSpec(string(">",width,".",prec,"f"))   #right justified, else "<"
-fmt = FormatSpec(string(">",wid,"d"))               #for Int
+fmt  = FormatSpec(string(">",wid,"d"))              #for Int
 str  = Formatting.fmt(fmt1,z))
 
 """
