@@ -59,7 +59,9 @@ function printmat(fh::IO,x;width=10,prec=3,NoPrinting=false,htmlQ=false)
         htmlQ ? write(iob,"<td>",lpad(x[i,j]+0,width),"</td>") : write(iob,lpad(x[i,j]+0,width))
       elseif isa(x[i,j],Nothing)          #Nothing
         htmlQ ? write(iob,"<td>",lpad("",width),"</td>") : write(iob,lpad("",width))
-      else                                #other types (Integer,Missing,String,Date,...)
+      elseif isa(x[i,j],String)           #String, left justified
+        htmlQ ? write(iob,"<td>",rpad(x[i,j],width),"</td>") : write(iob,rpad(x[i,j],width))
+      else                                #other types (Integer,Missing,Date,...)
         htmlQ ? write(iob,"<td>",lpad(x[i,j],width),"</td>") : write(iob,lpad(x[i,j],width))
       end
     end
