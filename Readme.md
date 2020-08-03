@@ -18,4 +18,4 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 3. The folder Data contains some data sets used in the notebooks, while the folder Results is for output.
 
-4. The current version is tested on Julia 1.2 and 1.3.
+4. The current version is tested on Julia 1.4 and 1.5.
