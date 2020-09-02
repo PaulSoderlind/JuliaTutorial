@@ -315,6 +315,27 @@ function writeElementPs(iob,x,i,j,width,prec,StringFmt)
 
 
 #------------------------------------------------------------------------------
+
+#One of the two subsequent functions is needed for handling cases like "1.5e-6"
+#This should not be necessary after Julia 1.6
+
+#fmtNumPsX(fmt,z) = @eval Printf.@sprintf($fmt,$z)   #slow fallback solution
+
+function fmtNumPsC(fmt,z)                           #c fallback solution
+  if ismissing(z) || isnan(z) || isinf(z)    #asprintf does not work for these cases
+    str = string(z)
+  else
+    strp = Ref{Ptr{Cchar}}(0)
+    len = ccall(:asprintf,Cint,(Ptr{Ptr{Cchar}},Cstring,Cdouble...),strp,fmt,z)
+    str = unsafe_string(strp[],len)
+    Libc.free(strp[])
+  end
+  return str
+end
+#------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------
 """
     fmtNumPs(z,width=10,prec=2,justify="right",StringFmt="")
 
@@ -336,12 +357,18 @@ Create a formatted string of a number. With prec=0, it can be used Bools and Str
 function fmtNumPs(z,width=10,prec=2,justify="right",StringFmt="")
 
   if (prec > 0) && !ismissing(z) && !isnan(z)  && !isinf(z)  #example: 101.0234, prec=3
-    (z_fract,z_int) = modf(abs(z))                     #0.02339999,101.0
-    z_fractI = round(Int,exp10(prec)*z_fract)          #23
-    z_fractS = lpad(z_fractI,prec,"0")                 #"023"
-    z_intI   = round(Int,z_int)
-    strLR    = string(z_intI,".",z_fractS)             #"101.023"
-    (sign(z) < 0) && (strLR = string("-",strLR))       #fix sign, round(Int,) drops it
+    zRound = round(z,digits=prec)
+    str = split(string(zRound),'.')
+    if length(str) > 1 && !occursin("e",str[2])   #skip "1.5e-6"
+      strR  = string(".",rpad(str[2],prec,"0"))   #.23
+      strLR = string(str[1],strR)                 #"101" * ".23"
+    elseif occursin("e",str[2])                   #"1.5e-6" -> " 0.0000015" if prec=7
+      fmt = "%$(width).$(prec)f"
+      #strLR = fmtNumPsX(fmt,zRound)               #slow fallback solution
+      strLR = fmtNumPsC(fmt,zRound)                #C fallback solution
+    else
+      strLR = string(zRound)
+    end
   else
     (isa(z,AbstractFloat) && !isnan(z) && !isinf(z)) && (z = round(Int,z))  #Float -> Int
     strLR = string(z)
