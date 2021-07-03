@@ -1,10 +1,22 @@
 #------------------------------------------------------------------------------
 """
-    printTeXTable(fh::IO,x,colNames=[],rowNames=[];width=12,prec=2)
+    printTeXTable(fh::IO,x;colNames=[],rowNames=[],width=12,prec=2) or
+    printTeXTable(x;colNames=[],rowNames=[],width=12,prec=2) or
 
-Create LaTeX table from numeric matrix x
+Create LaTeX table from numeric matrix x. Print to file or screen and returns a string
+with the table contents.
+
+# Input
+-`fh::IOStream`:
+-`x::`:
+-`colNames::`:
+-`rowNames::`:
+-`width::`:
+-`prec::`:
+
+
 """
-function printTeXTable(fh::IO,x,colNames=[],rowNames=[];width=12,prec=2)
+function printTeXTable(fh::IO,x;colNames=[],rowNames=[],width=12,prec=2)
 
   (m,n) = (size(x,1),size(x,2))
 
@@ -34,13 +46,14 @@ function printTeXTable(fh::IO,x,colNames=[],rowNames=[];width=12,prec=2)
     \\hline
     \\end{tabular}
   \\end{table}"""
-  str = string(str,endstr)
+  str = string(str,endstr,"\n")
 
-  print(fh,str,"\n")                                                    #print
-  return nothing
+  print(fh,str)                                                        #print
+
+  return str
 
 end
                                       #when fh is not supplied: printing to screen
-printTeXTable(x,colNames=[],rowNames=[];width=12,prec=2) =
-printTeXTable(stdout::IO,x,colNames,rowNames,width=width,prec=prec)
+printTeXTable(x;colNames=[],rowNames=[],width=12,prec=2) =
+printTeXTable(stdout::IO,x;colNames,rowNames,width,prec)
 #------------------------------------------------------------------------------

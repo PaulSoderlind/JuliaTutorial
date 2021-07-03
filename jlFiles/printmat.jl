@@ -55,7 +55,13 @@ function printmat(fh::IO,x...;colNames=[],rowNames=[],
 
   isempty(x) && return nothing                         #do nothing is isempty(x)
 
-  x     = hcat(x...)                                   #create matrix from tuple created by x...
+  typeTestQ = any(!=(eltype(x[1])),[eltype(z) for z in x])  #test if eltype(x[i]) differs
+  if typeTestQ                                      #create matrix from tuple created by x...
+    x = hcat(Matrix{Any}(hcat(x[1])),x[2:end]...)   #preserving types of x[i]
+  else
+    x = hcat(x...)
+  end
+
   (m,n) = (size(x,1),size(x,2))
 
   (length(rowNames) == 1 < m) && (rowNames = [string(rowNames[1],i) for i = 1:m])  #"ri"
@@ -108,9 +114,7 @@ function printmat(fh::IO,x...;colNames=[],rowNames=[],
 end
                         #when fh is not supplied: printing to screen
 printmat(x...;colNames=[],rowNames=[],width=10,prec=3,NoPrinting=false,StringFmt="",cell00="") =
-    printmat(stdout::IO,x...;colNames=colNames,rowNames=rowNames,
-             width=width,prec=prec,NoPrinting=NoPrinting,StringFmt=StringFmt,cell00=cell00)
-                          #in Julia 1.5: could simplify to colNames,rowNames,etc
+    printmat(stdout::IO,x...;colNames,rowNames,width,prec,NoPrinting,StringFmt,cell00)
 #------------------------------------------------------------------------------
 
 
@@ -146,7 +150,7 @@ function printlnPs(fh::IO,z...;width=10,prec=3)
 
 end
                       #when fh is not supplied: printing to screen
-printlnPs(z...;width=10,prec=3) = printlnPs(stdout::IO,z...,width=width,prec=prec)
+printlnPs(z...;width=10,prec=3) = printlnPs(stdout::IO,z...;width,prec)
 #------------------------------------------------------------------------------
 
 
