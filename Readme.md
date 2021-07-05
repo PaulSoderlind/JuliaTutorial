@@ -14,8 +14,8 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 1. Tutorial_ChapterNumber_Topic.ipynb are (relatively) short notebooks organised around different topics.
 
-2. The .jl files are functions used in some of the notebooks.
+2. The folder jlFiles contains some .jl files with functions used in some of the notebooks.
 
 3. The folder Data contains some data sets used in the notebooks, while the folder Results is for output.
 
-4. The current version is tested on Julia 1.5 and 1.6.
+4. The current version is tested on Julia 1.6.
