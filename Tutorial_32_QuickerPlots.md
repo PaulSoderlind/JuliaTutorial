@@ -1,4 +1,6 @@
-Get quicker (first) plot by using [PackageCompiler.jl](https://github.com/JuliaLang/PackageCompiler.jl)
+# Get quicker (first) plot 
+
+by using [PackageCompiler.jl](https://github.com/JuliaLang/PackageCompiler.jl)
 
 This file contains instructions for how to create a Julia sysimage file (to speed up the plots) that
 can be used for either working in the REPL or in IJulia.
