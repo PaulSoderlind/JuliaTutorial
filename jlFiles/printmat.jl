@@ -297,6 +297,6 @@ Call it as `@doc2 printmat`. For use in notebooks in VS code.
 
 """
 macro doc2(fn)
-  return :( display("text/markdown",Base.doc($fn)))
+  return :( display("text/markdown",Base.doc($(esc(fn)))))
 end
 #------------------------------------------------------------------------------
