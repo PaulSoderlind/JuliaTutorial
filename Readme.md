@@ -7,7 +7,7 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 1. Most files are jupyter notebooks. Click one of them to see it online. If GitHub fails to render the notebook, then use [nbviewer](https://nbviewer.jupyter.org/). Instructions: try to open the notebook at GitHub, copy the link and paste it in the address field of nbviewer.
 
-2. A pdf file contains a print-out of all all notebooks.  
+2. A pdf file contains a print-out of all notebooks.  
 
 3. To download this repository, use the Download (as zip) in the Github menu. Otherwise, clone it.
 
@@ -16,7 +16,7 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 1. Tutorial_ChapterNumber_Topic.ipynb are (relatively) short notebooks organised around different topics.
 
-2. NotebooksAsPDF.pdf is a print-out of all all notebooks. 
+2. NotebooksAsPDF.pdf is a print-out of all notebooks. 
 
 3. The folder src contains .jl files with functions used in the notebooks.
 
