@@ -14,7 +14,7 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 # On the Files
 
-1. Tutorial_ChapterNumber_Topic.ipynb are (relatively) short notebooks organised around different topics.
+1. Tutorial_ChapterNumber_Topic.ipynb are (relatively) short notebooks organised around different topics. Tutorial_01 to 03 are fast-paced summaries of things that are commonly used in econometrics and finance. The rest of the notebooks go slower and provide more details. 
 
 2. NotebooksAsPDF.pdf is a print-out of all notebooks. 
 
@@ -24,4 +24,4 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 5. The plots are in png format. If you want sharper plots, change `default(fmt = :png)` to `default(fmt = :svg)` in one of the top cells.
 
-6. The current version is tested on Julia 1.11.
+6. The current version is tested on Julia 1.12.
