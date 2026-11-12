@@ -25,3 +25,10 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 5. The plots are in png format. If you want sharper plots, change `default(fmt = :png)` to `default(fmt = :svg)` in one of the top cells.
 
 6. The current version is tested on Julia 1.12.
+
+7. (Experimental) mp4 files with some simple walk-throughs
+
+
+# mp4 files
+
+1. <video src="videos/Tutorial_01_FastTrack_Basics.mp4" controls></video> 
