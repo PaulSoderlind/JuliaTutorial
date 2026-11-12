@@ -33,7 +33,5 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 ### Tutorial 01
 
-[a quick walk-through of Tutorial 01*](videos/Tutorial_01_FastTrack_Basics.mp4)
-
-
+[a quick walk-through of Tutorial 01](https://raw.githubusercontent.com/PaulSoderlind/JuliaTutorial/main/videos/Tutorial_01_FastTrack_Basics.mp4)
 
