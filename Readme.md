@@ -31,4 +31,5 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 # mp4 files
 
-1. <video src="videos/Tutorial_01_FastTrack_Basics.mp4" controls></video> 
+### Tutorial 01
+<video src="videos/Tutorial_01_FastTrack_Basics.mp4" controls></video> 
