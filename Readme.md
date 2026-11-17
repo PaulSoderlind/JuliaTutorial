@@ -47,3 +47,6 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 3. [Load and save data](https://drive.google.com/file/d/1NMj-xnv-40wPCym7Dh4Karw2FSDb0xTi/view?usp=sharing),
 [Plots](https://drive.google.com/file/d/17zIa5J7coV5ZcM3QaRqfMDGr0WCQGb2g/view?usp=sharing), and
 [how to work with VSCode](https://drive.google.com/file/d/1pMPKjo9_kJ6EKqwlsSliI4Bi3CL9KrFK/view?usp=sharing)
+
+4. [Statistics 1](https://drive.google.com/file/d/1N5S2et-_P82T8LAM6XtHI_m_H0dSEOsy/view?usp=sharing) and
+[Statistics 2](https://drive.google.com/file/d/14-VqDuuaEYeEJRYn6IjGq03AuR3_JOBQ/view?usp=sharing)
