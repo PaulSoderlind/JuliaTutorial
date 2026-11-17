@@ -27,8 +27,14 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 6. The current version is tested on Julia 1.12.
 
 
+# Material for My Julia Course at UNISG
 
-# Walk-Throughs (videos) for a Julia course for finance students
+## Problem Sets 
+- Problem set 1-5 (see above in the list of files)
+- ...the rest (coming later)
+
+
+## Walk-Throughs (videos) for a Julia course for finance students
 
 (warning: simple and certainly not edited)
 
