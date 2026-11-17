@@ -38,6 +38,7 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 (warning: simple and certainly not edited)
 
-1a. [Installation/getting started](https://drive.google.com/file/d/1srpoHpnbzShvqyDsDBAxgyBWEm6k3Q1q/view?usp=sharing)
+1. [Installation/getting started](https://drive.google.com/file/d/1srpoHpnbzShvqyDsDBAxgyBWEm6k3Q1q/view?usp=sharing) and 
+[Basics](https://drive.google.com/file/d/1Ke9MEYJTQAmLgMVV_lk0fSgPZ6XIA--3/view?usp=sharing)
 
-1b. [Basics](https://drive.google.com/file/d/1Ke9MEYJTQAmLgMVV_lk0fSgPZ6XIA--3/view?usp=sharing)
+2. [Functions](https://drive.google.com/file/d/1Ynx1kpwJaqcc6BohDtHIq9FP8GEeke5S/view?usp=sharing)
