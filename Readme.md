@@ -26,6 +26,10 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 6. The current version is tested on Julia 1.12.
 
+
+
 # Walk-Throughs (videos) for a Julia course for finance students
 
-1. [Functions](https://drive.google.com/file/d/1fPU9Lw0JHfex7Wx-VyMxqwlBLG_BrCCI/view?usp=sharing)
+(warning: simple and certainly not edited)
+
+1. [Installation/getting started](https://drive.google.com/file/d/1srpoHpnbzShvqyDsDBAxgyBWEm6k3Q1q/view?usp=sharing)
