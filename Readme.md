@@ -43,3 +43,7 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 2. [Functions](https://drive.google.com/file/d/1Ynx1kpwJaqcc6BohDtHIq9FP8GEeke5S/view?usp=sharing) and
 [Finding Roots](https://drive.google.com/file/d/1H4RQEBTDw8FFzrksnuDm-ESLK9dlOyVU/view?usp=sharing)
+
+3. [Load and save data](https://drive.google.com/file/d/1NMj-xnv-40wPCym7Dh4Karw2FSDb0xTi/view?usp=sharing),
+[Plots](https://drive.google.com/file/d/17zIa5J7coV5ZcM3QaRqfMDGr0WCQGb2g/view?usp=sharing), and
+[how to work with VSCode](https://drive.google.com/file/d/1pMPKjo9_kJ6EKqwlsSliI4Bi3CL9KrFK/view?usp=sharing)
