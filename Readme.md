@@ -50,3 +50,6 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 4. [Statistics 1](https://drive.google.com/file/d/1N5S2et-_P82T8LAM6XtHI_m_H0dSEOsy/view?usp=sharing) and
 [Statistics 2](https://drive.google.com/file/d/14-VqDuuaEYeEJRYn6IjGq03AuR3_JOBQ/view?usp=sharing)
+
+5. [Arrays](https://drive.google.com/file/d/12pH_zmQovZn5GaInMlSsH62NQP_gQgPV/view?usp=sharing) 
+[Data containers](https://drive.google.com/file/d/1FU3AMb--r7_pfajmxWq8FgqdYxwrL5BX/view?usp=sharing)
