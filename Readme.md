@@ -36,17 +36,17 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 ## Walk-Throughs (videos) for a Julia course for finance students
 
-(warning: simple and certainly not edited)
+(Warning: simple, neither rehearsed nor edited...)
 
 1. [Installation/getting started](https://drive.google.com/file/d/1srpoHpnbzShvqyDsDBAxgyBWEm6k3Q1q/view?usp=sharing) and 
 [Basics](https://drive.google.com/file/d/1Ke9MEYJTQAmLgMVV_lk0fSgPZ6XIA--3/view?usp=sharing)
 
 2. [Functions](https://drive.google.com/file/d/1Ynx1kpwJaqcc6BohDtHIq9FP8GEeke5S/view?usp=sharing) and
-[Finding Roots](https://drive.google.com/file/d/1H4RQEBTDw8FFzrksnuDm-ESLK9dlOyVU/view?usp=sharing)
+[Finding roots](https://drive.google.com/file/d/1H4RQEBTDw8FFzrksnuDm-ESLK9dlOyVU/view?usp=sharing)
 
 3. [Load and save data](https://drive.google.com/file/d/1NMj-xnv-40wPCym7Dh4Karw2FSDb0xTi/view?usp=sharing),
 [Plots](https://drive.google.com/file/d/17zIa5J7coV5ZcM3QaRqfMDGr0WCQGb2g/view?usp=sharing), and
-[how to work with VSCode](https://drive.google.com/file/d/1pMPKjo9_kJ6EKqwlsSliI4Bi3CL9KrFK/view?usp=sharing)
+[How to work with VSCode](https://drive.google.com/file/d/1pMPKjo9_kJ6EKqwlsSliI4Bi3CL9KrFK/view?usp=sharing)
 
 4. [Statistics 1](https://drive.google.com/file/d/1N5S2et-_P82T8LAM6XtHI_m_H0dSEOsy/view?usp=sharing) and
 [Statistics 2](https://drive.google.com/file/d/14-VqDuuaEYeEJRYn6IjGq03AuR3_JOBQ/view?usp=sharing)
@@ -54,14 +54,14 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 5. [Arrays](https://drive.google.com/file/d/12pH_zmQovZn5GaInMlSsH62NQP_gQgPV/view?usp=sharing) and 
 [Data containers](https://drive.google.com/file/d/1FU3AMb--r7_pfajmxWq8FgqdYxwrL5BX/view?usp=sharing)
 
-6. [Data types]() and
-[Dates]()
+6. [Data types](https://drive.google.com/file/d/1wrAcg5YtkWABQ1BGjsXYXbUCFuaggZuu/view?usp=sharing) and
+[Dates]
 
-7. [Matrix algebra]()
+7. [Matrix algebra]
 
-8. [Optimization 1]() and
-   [Optimization 2]()
+8. [Optimization 1] and
+   [Optimization 2]
 
-9. [Calling Python, C or R]()
+9. [Calling Python, C or R]
 
-10. [Modules and projects]()
+10. [Modules and projects]
