@@ -53,3 +53,15 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 
 5. [Arrays](https://drive.google.com/file/d/12pH_zmQovZn5GaInMlSsH62NQP_gQgPV/view?usp=sharing) and 
 [Data containers](https://drive.google.com/file/d/1FU3AMb--r7_pfajmxWq8FgqdYxwrL5BX/view?usp=sharing)
+
+6. [Data types]() and
+[Dates]()
+
+7. [Matrix algebra]()
+
+8. [Optimization 1]() and
+   [Optimization 2]()
+
+9. [Calling Python, C or R]()
+
+10. [Modules and projects]()
