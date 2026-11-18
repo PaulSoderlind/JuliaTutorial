@@ -55,13 +55,14 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 [Data containers](https://drive.google.com/file/d/1FU3AMb--r7_pfajmxWq8FgqdYxwrL5BX/view?usp=sharing)
 
 6. [Data types](https://drive.google.com/file/d/1wrAcg5YtkWABQ1BGjsXYXbUCFuaggZuu/view?usp=sharing) and
-[Dates]
+[Dates, coming soon]
 
-7. [Matrix algebra]
+7. [Matrix algebra](https://drive.google.com/file/d/1nv6W2OH4sa8Yu_fi6Vp7C8Y5nsOge0YW/view?usp=sharing)
 
-8. [Optimization 1] and
-   [Optimization 2]
+8. [Optimization 1](https://drive.google.com/file/d/16RQi0gcQQODkoFN54AF9e7YBr0KuickH/view?usp=sharing) and
+   [Optimization 2](https://drive.google.com/file/d/1EX84l5IIN7ACBE57tYiVWo9Un6DNqh9R/view?usp=sharing)
 
-9. [Calling Python, C or R]
+9. [Calling Python, C or R](https://drive.google.com/file/d/1FUD06YEk04KUIwLc8uTUAprdC6Zx4IbE/view?usp=sharing)
 
-10. [Modules and projects]
+10. [Threads](https://drive.google.com/file/d/17XVn1EjD5aqHDjNKnJM908LSv44ht-yj/view?usp=sharing) and
+[Modules and projects](https://drive.google.com/file/d/1BkOp0hDJnUvzONXDfZnC6brqvDpVZBl2/view?usp=sharing)
