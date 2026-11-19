@@ -27,14 +27,14 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 6. The current version is tested on Julia 1.12.
 
 
-# Material for My Julia Course at UNISG
+# Material for My Julia Course at UNISG (aimed at finance/econometrics students)
 
 ## Problem Sets 
 - Problem set 1-5 (see above in the list of files)
 - ...the rest (coming later)
 
 
-## Walk-Throughs (videos) for a Julia course for finance students
+## Walk-Throughs (Videos) of Some Notebooks
 
 (Warning: simple, neither rehearsed nor edited...)
 
@@ -55,7 +55,7 @@ This repository contains my Julia tutorials (aimed at students in finance and ec
 [Data containers](https://drive.google.com/file/d/1FU3AMb--r7_pfajmxWq8FgqdYxwrL5BX/view?usp=sharing)
 
 6. [Data types](https://drive.google.com/file/d/1wrAcg5YtkWABQ1BGjsXYXbUCFuaggZuu/view?usp=sharing) and
-[Dates, coming soon]
+[Date and Time](https://drive.google.com/file/d/15ySgydIhl3ehE8LsWHzZYSCZ179vohsE/view?usp=sharing)
 
 7. [Matrix algebra](https://drive.google.com/file/d/1nv6W2OH4sa8Yu_fi6Vp7C8Y5nsOge0YW/view?usp=sharing)
 
